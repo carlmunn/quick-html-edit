@@ -1,17 +1,11 @@
 {
-  "name": "try_gulp",
+  "name": "quick-html-edit",
   "version": "1.0.0",
-  "description": "Playing around with structure",
-  "main": "index.js",
+  "description": "Quick way to edit HTML, JS, CSS",
   "dependencies": {
-  },
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-sass": "^2.0.4",
-    "gulp-server-livereload": "^1.4.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "",
+    "gulp-ruby-sass": "",
+    "gulp-connect": ""
   },
   "author": "Carl Munn",
   "license": "ISC"

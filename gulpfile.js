@@ -1,26 +1,36 @@
 'use strict';
 
-var gulp  = require('gulp');
-var sass  = require('gulp-sass');
-var serve = require('gulp-server-livereload');
+var gulp    = require('gulp');
+var sass    = require('gulp-ruby-sass');
+var connect = require('gulp-connect');
+var path    = require('path');
 
-gulp.task('default', ['sass:watch', 'serve']);
+gulp.task('default', ['connect', 'watch:sass', 'watch:www']);
+
+gulp.task('livereload', function(){
+  gulp.src(path.join('www', '*.html'))
+    .pipe(connect.reload());
+})
+
+gulp.task('connect', function() {
+  connect.server({
+    root: 'www',
+    defaultFile: 'index.html',
+    host: '0.0.0.0',
+    livereload: true
+  });
+});
 
 gulp.task('sass', function(){
-  gulp.src('./scss/**/*.scss').
-    pipe(sass().on('error', sass.logError)).
-    pipe(gulp.dest('./css'));
+  return sass('./scss/**/*.scss').
+    on('error', sass.logError).
+    pipe(gulp.dest('./www/css'));
 });
 
-gulp.task('sass:watch', function(){
-    gulp.watch('./scss/**/*.scss', ['sass']);
+gulp.task('watch:sass', function(){
+  gulp.watch('./scss/**/*.scss', ['sass']);
 });
 
-gulp.task('serve', function(){
-	gulp.src('.').pipe(serve({
-		livereload:true,
-		defaultFile: 'index.html'
-		//directoryListing: true,
-		//open:true
-	}));
+gulp.task('watch:www', function(){
+  gulp.watch(['www/**/*'], ['livereload']);
 });
