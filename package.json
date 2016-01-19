@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Quick way to edit HTML, JS, CSS",
   "dependencies": {
+    "bower": "^1.7.2",
     "gulp": "",
-    "gulp-ruby-sass": "",
-    "gulp-connect": ""
+    "gulp-connect": "",
+    "gulp-ruby-sass": ""
   },
   "author": "Carl Munn",
   "license": "ISC"

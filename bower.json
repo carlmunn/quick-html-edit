@@ -1,0 +1,21 @@
+{
+  "name": "quick-html-edit",
+  "version": "0.0.1",
+  "homepage": "https://github.com/carlmunn/quick-html-edit",
+  "authors": [
+    "Carl Munn <me@carlmunn.com>"
+  ],
+  "description": "Quick edit",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0"
+  }
+}
