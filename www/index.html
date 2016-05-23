@@ -4,17 +4,23 @@
   <title>Quick Edit</title>
 </head>
 <link rel="stylesheet" type="text/css" href="css/all.css">
+
 <body>
-  <h1>Automate the reloading and SASS reloading. Still needs JS compiling</h1>
+  <div id="app"></div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<script type="text/javascript" src='//cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.min.js'></script>
+<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="js/all.js"></script>
 
 <!-- These are installed by Bower -->
-<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
 
 <script type="text/javascript">
   _log("Running javascript function");
   _log("jQuery", $().jquery)
+</script>
+
+<script type="text/babel">
 </script>
 </html>
